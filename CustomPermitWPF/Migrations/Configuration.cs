@@ -1,3 +1,5 @@
+using CustomPermitWPF.Domain;
+
 namespace CustomPermitWPF.Migrations
 {
     using System;

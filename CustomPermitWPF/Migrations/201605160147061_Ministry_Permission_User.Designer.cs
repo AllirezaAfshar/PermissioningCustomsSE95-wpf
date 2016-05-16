@@ -7,13 +7,13 @@ namespace CustomPermitWPF.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Init : IMigrationMetadata
+    public sealed partial class Ministry_Permission_User : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Init));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Ministry_Permission_User));
         
         string IMigrationMetadata.Id
         {
-            get { return "201605160107298_Init"; }
+            get { return "201605160147061_Ministry_Permission_User"; }
         }
         
         string IMigrationMetadata.Source

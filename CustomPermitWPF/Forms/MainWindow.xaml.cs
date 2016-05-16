@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CustomPermitWPF.Controllers;
 using CustomPermitWPF.Forms;
+using CustomPermitWPF.Model;
 
 namespace CustomPermitWPF
 {
@@ -29,6 +30,10 @@ namespace CustomPermitWPF
 
         private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
+
+            var x1= ContextCreator.GetInstance().GetContext().Users.Count();
+            x1 =ContextCreator.GetInstance().GetContext().Users.Count();
+
             if (Authentication.Login(txtUserName.Text, txtPassWord.Text))
             {
                 PermitsCartable cartable = new PermitsCartable();

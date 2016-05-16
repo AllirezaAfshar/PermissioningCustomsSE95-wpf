@@ -9,11 +9,10 @@ namespace CustomPermitWPF.Domain
 {
     public class Document : AbstractEntity
     {
-        [NotMapped]
+        public int UserID { get; set; }
         public User user { get; set; }
 
-        [NotMapped]
-        public List<Permission> PermissionList { get; set; }
+        public virtual ICollection<Permission> PermissionList { get; set; }
         public string CommodityName { get; set; }
 
         public int Price { get; set; }

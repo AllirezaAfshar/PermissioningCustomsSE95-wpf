@@ -101,12 +101,13 @@
     <Compile Include="Forms\PermitsCartable.xaml.cs">
       <DependentUpon>PermitsCartable.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605160107298_Init.cs" />
-    <Compile Include="Migrations\201605160107298_Init.Designer.cs">
-      <DependentUpon>201605160107298_Init.cs</DependentUpon>
+    <Compile Include="Migrations\201605160147061_Ministry_Permission_User.cs" />
+    <Compile Include="Migrations\201605160147061_Ministry_Permission_User.Designer.cs">
+      <DependentUpon>201605160147061_Ministry_Permission_User.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AbstractEntity.cs" />
+    <Compile Include="Model\ContextCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -120,8 +121,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201605160107298_Init.resx">
-      <DependentUpon>201605160107298_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605160147061_Ministry_Permission_User.resx">
+      <DependentUpon>201605160147061_Ministry_Permission_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

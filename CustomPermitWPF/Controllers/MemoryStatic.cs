@@ -26,7 +26,7 @@ namespace CustomPermitWPF.Controllers
         public static void AddPerm(Permission p)
         {
             p.ID = permID;
-            p.passed = false;
+            p.Passed = false;
             if(!PermissionList.Contains(p))  PermissionList.Add(p);
             permID++;
 
