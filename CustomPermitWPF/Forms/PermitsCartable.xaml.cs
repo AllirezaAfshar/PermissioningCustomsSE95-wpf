@@ -32,7 +32,7 @@ namespace CustomPermitWPF.Forms
             }
             else
             {
-                foreach (Documents documentse in MemoryStatic.DocumentList)
+                foreach (Document documentse in MemoryStatic.DocumentList)
                 {
                     DocumentListView.Content += string.Format("شماره سند: {0}   نام کالا: {1}  ارزش کالا: {2} ",documentse.ID,documentse.CommodityName,documentse.Price) + Environment.NewLine ;
 

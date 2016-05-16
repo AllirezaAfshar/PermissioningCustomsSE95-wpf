@@ -28,7 +28,7 @@ namespace CustomPermitWPF.Forms
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            MemoryStatic.AddDoc(new Documents(new User("test","test"),0,txtCommodityName.Text,txtCountryOfOrigin.Text,int.Parse(txtAmount.Text),int.Parse(txtprice.Text)));
+            MemoryStatic.AddDoc(new Document(new User("test","test"),0,txtCommodityName.Text,txtCountryOfOrigin.Text,int.Parse(txtAmount.Text),int.Parse(txtprice.Text)));
 
 
             PermitsCartable cartable = new PermitsCartable();

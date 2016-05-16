@@ -14,7 +14,7 @@ namespace CustomPermitWPF.Controllers
 
         public static List<Ministry> MinistrieList = new List<Ministry>(); 
         public static List<Permission> PermissionList = new List<Permission>();
-        public static List<Documents> DocumentList = new List<Documents>();
+        public static List<Document> DocumentList = new List<Document>();
         
         public static void AddMinistry(Ministry o)
         {
@@ -31,7 +31,7 @@ namespace CustomPermitWPF.Controllers
             permID++;
 
         }
-        public static void AddDoc(Documents d)
+        public static void AddDoc(Document d)
         {
             d.ID = docID;
             if(!DocumentList.Contains(d))  DocumentList.Add(d);

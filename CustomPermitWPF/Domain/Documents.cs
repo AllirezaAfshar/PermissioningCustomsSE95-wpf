@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Principal;
+using CustomPermitWPF.Model;
 
 
 namespace CustomPermitWPF.Domain
 {
-    public class Documents
+    public class Document : AbstractEntity
     {
+        [NotMapped]
         public User user { get; set; }
+
+        [NotMapped]
         public List<Permission> PermissionList { get; set; }
-        public int ID;
         public string CommodityName { get; set; }
 
         public int Price { get; set; }
@@ -20,7 +24,7 @@ namespace CustomPermitWPF.Domain
 
         public int Amount { get; set; }
 
-        public Documents(User u, int ID, string commodityName)
+        public Document(User u, int ID, string commodityName)
         {
             user = u;
             PermissionList = new List<Permission>();
@@ -28,7 +32,7 @@ namespace CustomPermitWPF.Domain
             this.CommodityName = commodityName;
         }
 
-        public Documents(User u, int ID, string commodityName, string countryOfOrigin, int amount, int price)
+        public Document(User u, int ID, string commodityName, string countryOfOrigin, int amount, int price)
         {
             user = u;
             this.ID = ID;

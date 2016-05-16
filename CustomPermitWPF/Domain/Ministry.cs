@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using CustomPermitWPF.Model;
 
 namespace CustomPermitWPF.Domain
 {
-    public class Ministry
+    [Table("Ministry")]
+    public class Ministry : AbstractEntity
     {
-        public int ID { get; set; }
         public string name { get; set; }
     }
 }
