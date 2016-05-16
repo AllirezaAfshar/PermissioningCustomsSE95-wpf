@@ -1,0 +1,19 @@
+﻿<Window x:Class="CustomPermitWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomPermitWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        Left="0" Top="0">
+    <Grid>
+        <Button x:Name="btnEnter" Content="ورود به سیستم" HorizontalAlignment="Center"  Margin="0,60,0,0" VerticalAlignment="Center" Width="120" RenderTransformOrigin="-0.497,0.418" Click="btnEnter_Click"/>
+        
+        
+        <TextBox x:Name="txtPassWord" HorizontalAlignment="Center" VerticalContentAlignment="Center" Height="23" Margin="0,-20,0,0" TextWrapping="Wrap" TextAlignment="Center"  PreviewMouseLeftButtonUp="TxtPassWord_OnPreviewMouseLeftButtonUp" Text="رمز عبور" VerticalAlignment="Center" Width="120"/>
+        
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Center" VerticalContentAlignment="Center" Height="23" Margin="0,-100,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="نام کاربری" VerticalAlignment="Center" PreviewMouseLeftButtonUp="TxtUserName_OnPreviewMouseLeftButtonUp" Width="120"/>
+
+    </Grid>
+</Window>
