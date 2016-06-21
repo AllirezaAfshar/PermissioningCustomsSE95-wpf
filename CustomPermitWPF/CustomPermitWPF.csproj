@@ -79,9 +79,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controllers\Authentication.cs" />
-    <Compile Include="Controllers\MemoryStatic.cs" />
     <Compile Include="CustomPermission.cs" />
-    <Compile Include="Domain\Documents.cs" />
+    <Compile Include="Domain\Decleration.cs" />
     <Compile Include="Domain\Ministry.cs" />
     <Compile Include="Domain\Permissions.cs" />
     <Compile Include="Domain\User.cs" />
@@ -106,7 +105,7 @@
       <DependentUpon>201605160147061_Ministry_Permission_User.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model\AbstractEntity.cs" />
+    <Compile Include="Model\IdentifiedEntity.cs" />
     <Compile Include="Model\ContextCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

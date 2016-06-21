@@ -7,7 +7,7 @@ using CustomPermitWPF.Model;
 
 namespace CustomPermitWPF.Domain
 {
-    public class Ministry : AbstractEntity
+    public class Ministry : IndetifiedEntity
     {
         public string Name { get; set; }
 

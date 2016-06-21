@@ -14,12 +14,12 @@ namespace CustomPermitWPF
         {
         }
 
-        public virtual DbSet<Document> Documents { get; set; }
+        public virtual DbSet<CommodityType> 
+        public virtual DbSet<Decleration> Declerations { get; set; }
         public virtual DbSet<Ministry> Ministries { get; set; }
         public virtual DbSet<Permission> Permissions { get; set; }
         public virtual DbSet<User> Users { get; set; }
-
-
+        
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -30,18 +30,20 @@ namespace CustomPermitWPF
                 .HasForeignKey(e=>e.UserID)
                 .WillCascadeOnDelete(true);
 
-
             modelBuilder.Entity<Ministry>()
                 .HasMany(e=>e.Permissions)
                 .WithRequired(e=>e.Ministry)
                 .HasForeignKey(e=>e.MinistryID)
                 .WillCascadeOnDelete(true);
 
-            modelBuilder.Entity<Document>()
+            modelBuilder.Entity<Decleration>()
                 .HasMany(e=>e.PermissionList)
-                .WithRequired(e=>e.Document)
+                .WithRequired(e=>e.Decleration)
                 .HasForeignKey(e=>e.DocumentID)
                 .WillCascadeOnDelete(true);
+
+            if (Users.Find("admin") == null)
+                Users.Add(new User("admin", "admin"));
         }
     }
 }
