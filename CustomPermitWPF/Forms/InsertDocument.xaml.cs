@@ -29,7 +29,7 @@ namespace CustomPermitWPF.Forms
         {
         }
 
-        private void button_submit(object sender, RoutedEventArgs e)
+        private void button_final(object sender, RoutedEventArgs e)
         {
             using (CustomPermission connection = new CustomPermission())
             {
@@ -44,6 +44,11 @@ namespace CustomPermitWPF.Forms
             App.Current.MainWindow = cartable;
             this.Close();
             cartable.Show();
+        }
+
+        private void button_submit(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

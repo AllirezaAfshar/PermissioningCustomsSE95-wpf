@@ -64,7 +64,7 @@ namespace CustomPermitWPF.Forms
             registerationDocument.Show();
         }
 
-        private void btnAddRule(object sender, RoutedEventArgs e)
+        private void btnAddRule_Click(object sender, RoutedEventArgs e)
         {
             RuleInsertion doc = new RuleInsertion();
             App.Current.MainWindow = doc;

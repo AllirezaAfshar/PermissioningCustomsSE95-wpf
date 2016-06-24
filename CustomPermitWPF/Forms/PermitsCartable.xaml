@@ -11,7 +11,7 @@
         <Button x:Name="btnInsertDocument"  Content="افزودن سند" HorizontalAlignment="Left" Margin="47,47,0,0" VerticalAlignment="Top" Width="88" Click="btnInsertDocument_Click" Height="29"/>
         <Label x:Name="DocumentListView" Background="AliceBlue" Content="" HorizontalAlignment="Left" Margin="211,47,0,0" VerticalAlignment="Top" Height="193" Width="243"/>
         <Button x:Name="btnRegisteration"  Content="ثبت نام کاربر جدید" HorizontalAlignment="Left" Margin="47,0,0,32.5" VerticalAlignment="Bottom" Width="135" Click="btnRegisteration_Click" Height="26"/>
-        <Button x:Name="btnAddRule"  Content="افزودن قانون" HorizontalAlignment="Left" Margin="47,0,0,199.5" VerticalAlignment="Bottom" Width="88" Click="btnAddRule" Height="26"/>
+        <Button x:Name="btnAddRule" Content="افزودن قانون" HorizontalAlignment="Left" Margin="47,0,0,199.5" VerticalAlignment="Bottom" Width="88" Click="btnAddRule_Click" Height="26"/>
 
     </Grid>
 </Window>
