@@ -28,6 +28,10 @@ namespace CustomPermitWPF.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            if (context.Users.Count() == 0)
+            {
+                context.Users.Add(new User("admin", "admin", "admin"));
+            }
         }
     }
 }

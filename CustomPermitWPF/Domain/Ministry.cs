@@ -7,10 +7,15 @@ using CustomPermitWPF.Model;
 
 namespace CustomPermitWPF.Domain
 {
-    public class Ministry : AbstractEntity
+    [Table("Ministries")]
+    public class Ministry : IdentifiedEntity
     {
         public string Name { get; set; }
 
         public virtual ICollection<Permission> Permissions { get; set; } 
+
+        public Ministry()
+        {
+        }
     }
 }

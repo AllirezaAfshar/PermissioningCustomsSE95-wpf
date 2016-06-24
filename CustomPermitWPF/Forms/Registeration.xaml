@@ -1,17 +1,21 @@
-﻿<Window x:Class="CustomPermitWPF.MainWindow"
+﻿<Window x:Class="CustomPermitWPF.Forms.Registeration"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CustomPermitWPF"
+        xmlns:local="clr-namespace:CustomPermitWPF.Forms"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525"
+        Title="Registeration" Height="350" Width="525"
         Left="0" Top="0">
     <Grid>
-        <Button x:Name="btnEnter" Content="ورود به سیستم" HorizontalAlignment="Center"  Margin="0,60,0,0" VerticalAlignment="Center" Width="120" RenderTransformOrigin="-0.497,0.418" Click="btnEnter_Click"/>
+        <Button x:Name="btnEnter" Content="ثبت نام" HorizontalAlignment="Center"  Margin="198.5,0,198.5,71.52" VerticalAlignment="Bottom" Width="120" RenderTransformOrigin="-0.497,0.418" Click="btnEnter_Click"/>
 
         <TextBox x:Name="txtUserName" HorizontalAlignment="Center" VerticalContentAlignment="Center" Height="23" Margin="0,-100,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" Width="120"/>
         <PasswordBox x:Name="txtPassword" Margin="0,-20,0,0" HorizontalAlignment="Center" VerticalContentAlignment="Center" Height="23" Width="120"/>
+        <ComboBox x:Name="comboBox" Margin="198.5,0,198.5,112.04" VerticalAlignment="Bottom">
+            <ComboBoxItem Content="ادمین"/>
+            <ComboBoxItem Content="کارمند"/>
+        </ComboBox>
 
     </Grid>
 </Window>

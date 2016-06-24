@@ -31,27 +31,18 @@ namespace CustomPermitWPF
         private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
 
-            var x1= ContextCreator.GetInstance().GetContext().Users.Count();
-            x1 =ContextCreator.GetInstance().GetContext().Users.Count();
-
-            if (Authentication.Login(txtUserName.Text, txtPassWord.Text))
+            if (Authentication.Login(txtUserName.Text, txtPassword.Password))
             {
                 PermitsCartable cartable = new PermitsCartable();
                 App.Current.MainWindow = cartable;
                 this.Close();
                 cartable.Show();
             }
-        }
-
-
-        private void TxtPassWord_OnPreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            txtPassWord.Text = "";
-        }
-
-        private void TxtUserName_OnPreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            txtUserName.Text = "";
+            else
+            {
+                txtUserName.Clear();
+                txtPassword.Clear();
+            }
         }
     }
 }

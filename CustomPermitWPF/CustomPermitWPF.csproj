@@ -79,11 +79,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controllers\Authentication.cs" />
-    <Compile Include="Controllers\MemoryStatic.cs" />
     <Compile Include="CustomPermission.cs" />
-    <Compile Include="Domain\Documents.cs" />
+    <Compile Include="Domain\Rule.cs" />
+    <Compile Include="Domain\Decleration.cs" />
     <Compile Include="Domain\Ministry.cs" />
-    <Compile Include="Domain\Permissions.cs" />
+    <Compile Include="Domain\Permission.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Forms\InsertDocument.xaml.cs">
       <DependentUpon>InsertDocument.xaml</DependentUpon>
@@ -96,17 +96,43 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\Registeration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Forms\RuleInsertion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Forms\PermitsCartable.xaml.cs">
       <DependentUpon>PermitsCartable.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605160147061_Ministry_Permission_User.cs" />
-    <Compile Include="Migrations\201605160147061_Ministry_Permission_User.Designer.cs">
-      <DependentUpon>201605160147061_Ministry_Permission_User.cs</DependentUpon>
+    <Compile Include="Forms\Registeration.xaml.cs">
+      <DependentUpon>Registeration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RuleInsertion.xaml.cs">
+      <DependentUpon>RuleInsertion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606240735426_Migr.cs" />
+    <Compile Include="Migrations\201606240735426_Migr.Designer.cs">
+      <DependentUpon>201606240735426_Migr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606241028544_decl_commodity.cs" />
+    <Compile Include="Migrations\201606241028544_decl_commodity.Designer.cs">
+      <DependentUpon>201606241028544_decl_commodity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606241033267_NewMig.cs" />
+    <Compile Include="Migrations\201606241033267_NewMig.Designer.cs">
+      <DependentUpon>201606241033267_NewMig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606241117512_Custom_permission.cs" />
+    <Compile Include="Migrations\201606241117512_Custom_permission.Designer.cs">
+      <DependentUpon>201606241117512_Custom_permission.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model\AbstractEntity.cs" />
+    <Compile Include="Model\IdentifiedEntity.cs" />
     <Compile Include="Model\ContextCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -121,8 +147,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201605160147061_Ministry_Permission_User.resx">
-      <DependentUpon>201605160147061_Ministry_Permission_User.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201606240735426_Migr.resx">
+      <DependentUpon>201606240735426_Migr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606241028544_decl_commodity.resx">
+      <DependentUpon>201606241028544_decl_commodity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606241033267_NewMig.resx">
+      <DependentUpon>201606241033267_NewMig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606241117512_Custom_permission.resx">
+      <DependentUpon>201606241117512_Custom_permission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

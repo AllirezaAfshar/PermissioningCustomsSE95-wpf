@@ -25,21 +25,27 @@ namespace CustomPermitWPF.Forms
         {
             InitializeComponent();
 
+            bool isAdmin = CustomPermission.active_user.Role.Equals("admin");
+            btnRegisteration.Visibility = isAdmin ? Visibility.Visible : Visibility.Hidden;
+            btnAddRule.Visibility = isAdmin ? Visibility.Visible : Visibility.Hidden;
 
-            if (MemoryStatic.DocumentList.Count == 0)
+            using (CustomPermission connection = new CustomPermission())
             {
-                DocumentListView.Content = "هیچ سندی یافت نشد";
-            }
-            else
-            {
-                foreach (Document documentse in MemoryStatic.DocumentList)
+                IEnumerable<Decleration> declerations = connection.Declerations.AsEnumerable();
+
+                if (declerations.Count() == 0)
                 {
-                    DocumentListView.Content += string.Format("شماره سند: {0}   نام کالا: {1}  ارزش کالا: {2} ",documentse.ID,documentse.CommodityName,documentse.Price) + Environment.NewLine ;
-
-
+                    DocumentListView.Content = "هیچ سندی یافت نشد";
+                }
+                else
+                {
+                    foreach (Decleration decleration in declerations)
+                    {
+                        DocumentListView.Content += string.Format("شماره سند: {0}   نام کالا: {1}  ارزش کالا: {2} ", decleration.ID, decleration.CommodityName, decleration.Price) + Environment.NewLine;
+                    }
                 }
             }
-
+            
         }
 
         private void btnInsertDocument_Click(object sender, RoutedEventArgs e)
@@ -48,6 +54,22 @@ namespace CustomPermitWPF.Forms
             App.Current.MainWindow = insertDocument;
             this.Close();
             insertDocument.Show();
+        }
+
+        private void btnRegisteration_Click(object sender, RoutedEventArgs e)
+        {
+            Registeration registerationDocument = new Registeration(this);
+            App.Current.MainWindow = registerationDocument;
+            this.Close();
+            registerationDocument.Show();
+        }
+
+        private void btnAddRule(object sender, RoutedEventArgs e)
+        {
+            RuleInsertion doc = new RuleInsertion();
+            App.Current.MainWindow = doc;
+            this.Close();
+            doc.Show();
         }
     }
 }

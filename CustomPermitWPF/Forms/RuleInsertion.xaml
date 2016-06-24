@@ -1,0 +1,59 @@
+﻿<Window x:Class="CustomPermitWPF.Forms.RuleInsertion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomPermitWPF.Forms"
+        mc:Ignorable="d"
+        Title="RuleInsertion" Height="700" Width="1000" Background="#FFBEE6D6">
+    <Grid x:Name="ManiFest" Background="#FFBEE6D6" Margin="0,10,-8,-21" HorizontalAlignment="Right" Width="1000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="425*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="191*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="655*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="32*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label_Copy1" Content="کشور مبدا" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="639,162,0,0" Width="82" Height="26"/>
+        <Label x:Name="label_Copy2" Content="کشور مقصد" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="281,167,0,0" Width="83" Height="26"/>
+        <Label x:Name="label_Copy3" Content="کالای مورد درخواستی برای ورود" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="526,4,0,0" Width="83" Height="0" Grid.Row="2"/>
+        <Label x:Name="label_Copy4" Content="تاریخ شروع" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="639,270,0,0" Width="145" Height="26"/>
+        <Label x:Name="label1" Content="زمان اعتبار" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="526,0,0,0" Width="83" Height="0" Grid.Row="2"/>
+        <TextBox x:Name="SourceCountry" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="482,162,0,0"/>
+        <TextBox x:Name="DestinationCountry" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="143,165,0,0"/>
+        <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="482,272,0,0" Width="119" Height="24"/>
+        <Label x:Name="label2" Content="مدت اعتبار" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="286,271,0,0" Width="83" Height="26"/>
+        <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="143,272,0,0" Width="121" Height="24"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="670" VerticalAlignment="Top" Width="149" Grid.ColumnSpan="3" Grid.Column="1" Grid.RowSpan="3" Background="#FF271064"/>
+        <Label x:Name="label3" Content="میزان ورود کالا" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="639,351,0,0" Height="30" Width="161"/>
+        <TextBox x:Name="MinimumWeight" HorizontalAlignment="Left" TextWrapping="Wrap" Width="120" Margin="383,349,0,0" Height="23" VerticalAlignment="Top"/>
+        <Button x:Name="Restart" Content="شروع مجدد" HorizontalAlignment="Left" VerticalAlignment="Top" Width="78" Margin="286,113,0,0" Height="34" Grid.Row="2"/>
+        <Button x:Name="FinalRegistratin" Content="ثبت نهایی" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="470,113,0,0" Grid.Row="2" Height="34" Click="FinalRegistratin_Click"/>
+        <Label x:Name="label4" Content="شرکت تولید کننده ی کالا " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="639,40,0,0" Width="161" Grid.Row="2" RenderTransformOrigin="0.497,-0.327" Height="26"/>
+        <TextBox x:Name="CompanyName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="481,43,0,0" Grid.Row="2"/>
+        <Label x:Name="label3_Copy" Content="حداکثر" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="238,351,0,0" Height="25" Width="40"/>
+        <Label x:Name="label3_Copy1" Content="حداقل" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="508,349,0,0" Height="25" Width="42"/>
+        <TextBox x:Name="MaximumWeight" HorizontalAlignment="Left" TextWrapping="Wrap" Width="120" Margin="113,351,0,0" Height="23" VerticalAlignment="Top"/>
+        <Label x:Name="label3_Copy2" Content="ارزش کالا" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="639,401,0,0" Height="30" Width="161" Grid.RowSpan="2"/>
+        <TextBox x:Name="MinimumPrice" HorizontalAlignment="Left" TextWrapping="Wrap" Width="120" Margin="383,399,0,3"/>
+        <Label x:Name="label3_Copy3" Content="حداکثر" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="238,401,0,0" Height="25" Width="40" Grid.RowSpan="2"/>
+        <Label x:Name="label3_Copy4" Content="حداقل" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="508,399,0,0" Height="25" Width="42"/>
+        <TextBox x:Name="MaximumPrice" HorizontalAlignment="Left" TextWrapping="Wrap" Width="120" Margin="113,401,0,0" Height="23" VerticalAlignment="Top"/>
+        <Label x:Name="label5_Copy" Content="نحوهی ورود به کشور" HorizontalAlignment="Left" RenderTransformOrigin="1.276,1.346" Margin="635,39,0,172" Width="161" Grid.Row="1" Grid.RowSpan="2"/>
+        <RadioButton x:Name="AirTransport_Copy" GroupName="Transport" Content="هوایی" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="496,39,0,0" FlowDirection="RightToLeft" Height="15" Grid.Row="1" Width="50"/>
+        <RadioButton x:Name="Transit_Copy"  GroupName="Transport" Content="زمینی" HorizontalAlignment="Left" Margin="379,39,0,10" FlowDirection="RightToLeft" Grid.Row="1" Width="48"/>
+        <RadioButton x:Name="Shipping_Copy"  GroupName="Transport" Content="دریایی" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="257,0,0,10" FlowDirection="RightToLeft" Height="15" Grid.Row="1" Width="52"/>
+        <Label x:Name="label5" Content="نوع کالا" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="638,217,0,0"/>
+        <TextBox x:Name="ProductType" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="481,220,0,0"/>
+        <Label x:Name="label5_Copy1" Content="نام کالا" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="301,217,0,0"/>
+        <TextBox x:Name="ProductName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="144,220,0,0"/>
+        <Label x:Name="label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="177,10,0,0"/>
+            <Label x:Name="label6" Background="Beige" Padding="60,20,10,10" Content="افزودن قوانین جدید به سیستم مرکزی"  HorizontalAlignment="Left"  VerticalAlignment="Top"  Height="78" Width="437" FontStretch="ExtraCondensed" FontWeight="ExtraBold" FontSize="18.667"/>
+        
+    </Grid>
+</Window>
+

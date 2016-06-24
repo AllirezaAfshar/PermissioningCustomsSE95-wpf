@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using CustomPermitWPF.Controllers;
 using CustomPermitWPF.Domain;
 
 namespace CustomPermitWPF.Forms
@@ -26,10 +25,20 @@ namespace CustomPermitWPF.Forms
             InitializeComponent();
         }
 
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        private void button_restart(object sender, RoutedEventArgs e)
         {
-            MemoryStatic.AddDoc(new Document(new User("test","test"),0,txtCommodityName.Text,txtCountryOfOrigin.Text,int.Parse(txtAmount.Text),int.Parse(txtprice.Text)));
+        }
 
+        private void button_submit(object sender, RoutedEventArgs e)
+        {
+            using (CustomPermission connection = new CustomPermission())
+            {
+                Decleration dec = new Decleration(CustomPermission.active_user, 0, ImportedGoods.Text, SourceCountry.Text, int.Parse(Amount.Text), int.Parse(PriceOfAUnit.Text));
+                dec.User = null;
+                connection.Declerations.Add(dec);
+                connection.SaveChanges();
+                dec.User = CustomPermission.active_user;
+            }
 
             PermitsCartable cartable = new PermitsCartable();
             App.Current.MainWindow = cartable;
